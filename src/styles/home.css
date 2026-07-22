@@ -928,25 +928,57 @@
 
 @media (max-width: 767px) {
   .filter-auth-buttons {
-    display: none;
+    display: none !important;
   }
 
   .filter-bar-inner {
     flex-direction: column;
     align-items: stretch;
+    padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .filter-search {
+    max-width: 100%;
   }
 
   .filter-actions {
-    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-actions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .filter-location {
+    flex-shrink: 0;
   }
 }
 
-@media (max-width: 540px) {
+@media (min-width: 768px) {
+  .filter-bar-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
   .filter-auth-buttons {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    padding-top: 4px;
+    display: none;
+  }
+
+  .listings-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

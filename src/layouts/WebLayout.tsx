@@ -83,9 +83,41 @@ export default function WebLayout() {
 
         <div className="sidebar-post-btn">
           <button onClick={() => isLoggedIn ? openAuth('Create a new listing') : navigate('/register')}>
-            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
             Post Listing
           </button>
+        </div>
+
+        {/* Mobile-only utilities */}
+        <div className="sidebar-mobile-utils">
+          <p className="sidebar-mobile-utils-label">Settings</p>
+          <div className="sidebar-mobile-utils-row">
+            <button onClick={() => setDark(!dark)} className={dark ? 'sidebar-util--active' : ''}>
+              {dark ? <Sun size={15} /> : <Moon size={15} />}
+              {dark ? 'Light' : 'Dark'}
+            </button>
+            <button onClick={() => setLangOpen(!langOpen)} className={langOpen ? 'sidebar-util--active' : ''}>
+              <Globe size={15} />
+              {lang === 'en' ? 'English' : lang === 'yo' ? 'Yorùbá' : 'Français'}
+            </button>
+          </div>
+          {langOpen && (
+            <div className="sidebar-mobile-utils-row" style={{ marginTop: 4 }}>
+              {(['en', 'yo', 'fr'] as Lang[]).map((l) => (
+                <button key={l} onClick={() => { setLang(l); setLangOpen(false) }}
+                  className={lang === l ? 'sidebar-util--active' : ''}
+                  style={{ fontSize: 11, fontWeight: lang === l ? 700 : 400 }}>
+                  {l === 'en' ? '🇬🇧 EN' : l === 'yo' ? '🇳🇬 YO' : '🇫🇷 FR'}
+                </button>
+              ))}
+            </div>
+          )}
+          {!isLoggedIn && (
+            <div className="sidebar-mobile-auth">
+              <button className="sidebar-auth-signin" onClick={() => { setSidebarOpen(false); openAuth() }}>Sign In</button>
+              <button className="sidebar-auth-signup" onClick={() => { setSidebarOpen(false); navigate('/register') }}>Sign Up</button>
+            </div>
+          )}
         </div>
       </aside>
 
