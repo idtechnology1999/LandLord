@@ -905,6 +905,66 @@
   }
 }
 
+@media (max-width: 767px) {
+  .filter-auth-buttons {
+    display: none !important;
+  }
+
+  .filter-bar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    overflow: visible;
+  }
+
+  .filter-bar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 12px 8px 52px;
+    gap: 8px;
+  }
+
+  .filter-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    order: -1;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    font-size: 11px;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  .filter-location {
+    flex-shrink: 0;
+  }
+
+  .filter-dropdown-wrap {
+    position: relative;
+  }
+
+  .filter-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 999;
+  }
+
+  .filter-search {
+    max-width: 100%;
+  }
+
+  .filter-search input {
+    padding: 9px 14px 9px 36px;
+    font-size: 13px;
+  }
+}
+
 @media (min-width: 768px) {
   .filter-bar-inner {
     flex-direction: row;
@@ -923,80 +983,6 @@
 @media (min-width: 1024px) {
   .listings-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .filter-auth-buttons {
-    display: none !important;
-  }
-
-  .filter-bar {
-    position: sticky;
-    top: 0;
-    z-index: 30;
-  }
-
-  .filter-bar-inner {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 8px 12px 8px 52px;
-    gap: 8px;
-  }
-
-  .filter-actions {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 6px;
-    padding-bottom: 0;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    order: -1;
-    align-items: center;
-  }
-
-  .filter-actions::-webkit-scrollbar {
-    display: none;
-  }
-
-  .filter-btn {
-    flex-shrink: 0;
-    font-size: 11px;
-    padding: 6px 10px;
-    white-space: nowrap;
-  }
-
-  .filter-location {
-    flex-shrink: 0;
-  }
-
-  .filter-search {
-    max-width: 100%;
-  }
-
-  .filter-search input {
-    padding: 9px 14px 9px 36px;
-    font-size: 13px;
-  }
-
-  .filter-btn--primary {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .filter-bar-inner {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .filter-auth-buttons {
-    display: none;
-  }
-
-  .listings-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
