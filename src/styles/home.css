@@ -934,12 +934,8 @@
   .filter-bar-inner {
     flex-direction: column;
     align-items: stretch;
-    padding: 10px 14px;
+    padding: 8px 14px;
     gap: 8px;
-  }
-
-  .filter-search {
-    max-width: 100%;
   }
 
   .filter-actions {
@@ -947,9 +943,10 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 6px;
-    padding-bottom: 2px;
+    padding-bottom: 0;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
+    order: -1;
   }
 
   .filter-actions::-webkit-scrollbar {
@@ -964,6 +961,15 @@
 
   .filter-location {
     flex-shrink: 0;
+  }
+
+  .filter-search {
+    max-width: 100%;
+  }
+
+  .filter-search input {
+    padding: 9px 14px 9px 36px;
+    font-size: 13px;
   }
 }
 
