@@ -671,15 +671,15 @@
   .mobile-menu-btn {
     position: fixed;
     top: 8px;
-    left: 12px;
+    left: 10px;
     z-index: 35;
     background: var(--surface-elevated);
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border);
-    padding: 7px;
-    width: 34px;
-    height: 34px;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;

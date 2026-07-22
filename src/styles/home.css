@@ -920,14 +920,14 @@
   .filter-bar-inner {
     flex-direction: column;
     align-items: stretch;
-    padding: 8px 12px 8px 52px;
+    padding: 6px 10px 6px 48px;
     gap: 8px;
   }
 
   .filter-actions {
     display: flex;
     flex-wrap: nowrap;
-    gap: 6px;
+    gap: 5px;
     order: -1;
     align-items: center;
     overflow: visible;
@@ -935,13 +935,42 @@
 
   .filter-btn {
     flex-shrink: 0;
-    font-size: 11px;
-    padding: 6px 10px;
+    font-size: 10.5px;
+    padding: 5px 8px;
     white-space: nowrap;
+    gap: 3px;
+  }
+
+  .filter-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .filter-btn--primary {
+    background: var(--coral-600);
+    color: white;
+    border-color: var(--coral-600);
+    font-weight: 600;
+    padding: 5px 10px;
+    font-size: 10.5px;
+  }
+
+  .filter-btn--primary:hover {
+    background: var(--coral-500);
+    border-color: var(--coral-500);
   }
 
   .filter-location {
     flex-shrink: 0;
+  }
+
+  .filter-location .filter-btn {
+    max-width: 110px;
+  }
+
+  .filter-chevron {
+    width: 11px;
+    height: 11px;
   }
 
   .filter-dropdown-wrap {
