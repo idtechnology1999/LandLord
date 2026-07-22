@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect, useMemo } from 'react'
 import { useOutletContext, useNavigate } from 'react-router-dom'
-import { Search, SlidersHorizontal, MapPin, Bed, Bath, Heart, Star, Verified, ArrowRight, TrendingUp, X, ChevronDown, Eye, Shield, Bell } from 'lucide-react'
+import { Search, SlidersHorizontal, MapPin, Bed, Bath, Heart, Star, Verified, ArrowRight, TrendingUp, X, ChevronDown, Eye, Shield, Bell, Menu } from 'lucide-react'
 import { allListings, worldwideLocations } from '../data/listings'
 import type { Listing } from '../data/listings'
 
 import VirtualTour from '../components/VirtualTour'
 
-type ContextType = { openAuth: (prompt?: string) => void; isLoggedIn: boolean; t: Record<string, string> }
+type ContextType = { openAuth: (prompt?: string) => void; isLoggedIn: boolean; t: Record<string, string>; sidebarOpen: boolean; setSidebarOpen: (v: boolean) => void }
 
 const ITEMS_PER_PAGE = 20
 
@@ -181,7 +181,7 @@ function LocationCascade({ value, onChange }: { value: { country: string; state:
 }
 
 export default function Home() {
-  const { openAuth, isLoggedIn, t } = useOutletContext<ContextType>()
+  const { openAuth, isLoggedIn, t, setSidebarOpen } = useOutletContext<ContextType>()
   const navigate = useNavigate()
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
@@ -309,6 +309,9 @@ export default function Home() {
             )}
           </div>
           <div className="filter-actions">
+            <button className="mobile-filter-hamburger tap-target" onClick={() => setSidebarOpen(true)}>
+              <Menu size={16} />
+            </button>
             <LocationCascade value={location} onChange={setLocation} />
             <FilterDropdown label="Beds" icon={<Bed className="filter-btn-icon" />} options={bedOptions} value={selectedBeds} onChange={setSelectedBeds} />
             <FilterDropdown label="Price" options={priceRanges} value={selectedPrice} onChange={setSelectedPrice} />

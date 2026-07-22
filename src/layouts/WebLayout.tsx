@@ -125,9 +125,11 @@ export default function WebLayout() {
         <header className="top-header">
           <div className="header-inner">
             <div className="header-left">
-              <button onClick={() => setSidebarOpen(true)} className="mobile-menu-btn">
-                <Menu className="w-5 h-5" />
-              </button>
+              {(location.pathname !== '/home' && location.pathname !== '/home/') && (
+                <button onClick={() => setSidebarOpen(true)} className="mobile-menu-btn">
+                  <Menu className="w-5 h-5" />
+                </button>
+              )}
             </div>
 
             <div className="header-right">
@@ -191,8 +193,8 @@ export default function WebLayout() {
           </div>
         </header>
 
-        <main className="main-content-body">
-          <Outlet context={{ openAuth, isLoggedIn, t }} />
+        <main className={`main-content-body ${(location.pathname === '/home' || location.pathname === '/home/') ? 'is-home' : ''}`}>
+          <Outlet context={{ openAuth, isLoggedIn, t, sidebarOpen, setSidebarOpen }} />
         </main>
 
         <footer className="footer">

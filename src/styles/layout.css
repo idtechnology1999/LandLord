@@ -652,41 +652,34 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 767px) {
   .top-header {
-    position: relative;
-    height: 0;
-    overflow: visible;
-    background: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border-bottom: none !important;
-    z-index: auto;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.4);
+    z-index: 30;
   }
 
   .header-inner {
-    height: 0;
-    padding: 0;
-    overflow: visible;
+    height: auto;
+    padding: 8px 12px;
   }
 
   .mobile-menu-btn {
-    position: fixed;
-    top: 8px;
-    left: 10px;
-    z-index: 35;
-    background: var(--surface-elevated);
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border);
-    padding: 6px;
-    width: 32px;
-    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
+    border: none;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--navy-500);
   }
 
   .mobile-menu-btn:hover {
-    background: white;
+    background: var(--surface);
   }
 
   .header-right {
@@ -695,6 +688,13 @@
 
   .sidebar-mobile-utils {
     display: flex;
+  }
+}
+
+/* Home page: header hidden on mobile (filter bar handles it) */
+@media (max-width: 767px) {
+  .is-home .top-header {
+    display: none;
   }
 }
 

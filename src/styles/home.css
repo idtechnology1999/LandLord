@@ -920,7 +920,7 @@
   .filter-bar-inner {
     flex-direction: column;
     align-items: stretch;
-    padding: 6px 10px 6px 48px;
+    padding: 6px 10px;
     gap: 8px;
   }
 
@@ -931,6 +931,25 @@
     order: -1;
     align-items: center;
     overflow: visible;
+  }
+
+  .mobile-filter-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--navy-600);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-filter-hamburger:hover {
+    background: var(--navy-50);
   }
 
   .filter-btn {
