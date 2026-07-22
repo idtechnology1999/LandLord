@@ -404,6 +404,134 @@
 }
 
 /* ============================================================
+   Listing Cards in Chat
+   ============================================================ */
+.ai-listing-results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.ai-listing-card {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ai-listing-card:hover {
+  border-color: var(--coral-400, #e8836b);
+  box-shadow: 0 2px 12px rgba(196, 86, 58, 0.12);
+  transform: translateY(-1px);
+}
+
+.ai-listing-card__img {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.ai-listing-card__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ai-listing-card__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy-800);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ai-listing-card__loc {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--navy-500, #64748b);
+}
+
+.ai-listing-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.ai-listing-card__price {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--coral-600);
+}
+
+.ai-listing-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--navy-500, #64748b);
+}
+
+.ai-listing-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--coral-50);
+  border: 1px solid var(--coral-200, #f4a99a);
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--coral-600);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ai-listing-more:hover {
+  background: var(--coral-100, #fde8e0);
+  border-color: var(--coral-400, #e8836b);
+}
+
+/* Dark mode overrides for listing cards */
+.dark .ai-listing-card {
+  background: #1a1f2e;
+  border-color: var(--border);
+}
+
+.dark .ai-listing-card:hover {
+  border-color: var(--coral-600);
+}
+
+.dark .ai-listing-card__title {
+  color: #e2e8f0;
+}
+
+.dark .ai-listing-card__loc {
+  color: #64748b;
+}
+
+.dark .ai-listing-more {
+  background: rgba(196, 86, 58, 0.12);
+  border-color: rgba(196, 86, 58, 0.3);
+}
+
+/* ============================================================
    Mobile Responsive
    ============================================================ */
 @media (max-width: 480px) {
