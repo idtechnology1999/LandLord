@@ -1,0 +1,48 @@
+:root {
+  --navy-900: #0D1321;
+  --navy-800: #1B263B;
+  --navy-700: #243447;
+  --navy-600: #2D4059;
+  --navy-500: #415A77;
+  --navy-400: #5A7091;
+  --navy-300: #778DA9;
+  --navy-200: #A8B5C8;
+  --navy-100: #D4DCE8;
+  --navy-50: #EDF1F7;
+
+  --coral-600: #C4563A;
+  --coral-500: #E76F51;
+  --coral-400: #EE8A6F;
+  --coral-300: #F4A892;
+  --coral-200: #F8C4B8;
+  --coral-100: #FDE8E2;
+  --coral-50: #FFF5F1;
+
+  --green-600: #1B4332;
+  --green-500: #2D6A4F;
+  --green-400: #40916C;
+  --green-300: #52B788;
+  --green-200: #95D5B2;
+  --green-100: #D8F3DC;
+
+  --surface: #F7F8FA;
+  --surface-elevated: #FFFFFF;
+  --border: #E5E7EB;
+  --border-light: #F0F1F3;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --sidebar-width: 260px;
+  --header-height: 64px;
+}
+
+/* ── DARK MODE ── */
+.dark {
+  --surface: #0F1219;
+  --surface-elevated: #1A1F2E;
+  --border: #2A3040;
+  --border-light: #1E2330;
+
+  --navy-50: #1A1F2E;
+  --navy-100: #252B3B;
+  --navy-200: #3A4258;
+}

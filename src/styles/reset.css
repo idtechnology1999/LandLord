@@ -1,0 +1,196 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--surface);
+  color: var(--navy-800);
+  overflow-x: hidden;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background-color: var(--coral-500);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-100);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy-200);
+}
+
+/* ── GLOBAL TRANSITIONS ── */
+.page-content {
+  animation: page-enter 0.35s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.stagger-1 { animation-delay: 0.03s; }
+.stagger-2 { animation-delay: 0.06s; }
+.stagger-3 { animation-delay: 0.09s; }
+.stagger-4 { animation-delay: 0.12s; }
+.stagger-5 { animation-delay: 0.15s; }
+.stagger-6 { animation-delay: 0.18s; }
+
+/* ── iOS-like tap feedback ── */
+.tap-target {
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.tap-target:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+/* ── Smooth hover lifts ── */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Focus ring ── */
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--coral-400);
+  outline-offset: 2px;
+}
+
+/* ── Skeleton loading ── */
+.skeleton {
+  background: linear-gradient(90deg, var(--navy-50) 25%, var(--surface) 50%, var(--navy-50) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* ── Safe area for mobile ── */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .footer {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* ── iPhone-style polish ── */
+.ios-card {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.ios-pill {
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ios-pill:active {
+  transform: scale(0.96);
+}
+
+.ios-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.ios-spring {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ios-spring:active {
+  transform: scale(0.95);
+}
+
+.ios-shadow {
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.06),
+    0 16px 48px rgba(0, 0, 0, 0.04);
+}
+
+.ios-shadow-lg {
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 12px 40px rgba(0, 0, 0, 0.08),
+    0 24px 64px rgba(0, 0, 0, 0.05);
+}
+
+.ios-separator {
+  height: 0.5px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 0;
+}
+
+/* ── Global spring transitions for interactive elements ── */
+button, a, [role="button"] {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease,
+              opacity 0.2s ease;
+}
+
+button:active, a:active, [role="button"]:active {
+  transform: scale(0.97);
+}

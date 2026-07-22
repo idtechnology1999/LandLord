@@ -1,0 +1,78 @@
+.splash-screen {
+  min-height: 100vh;
+  background: var(--navy-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.splash-blobs {
+  position: absolute;
+  inset: 0;
+}
+
+.splash-blob-1 {
+  position: absolute;
+  top: 33%;
+  left: 33%;
+  width: 500px;
+  height: 500px;
+  background: rgba(231, 111, 81, 0.06);
+  border-radius: 50%;
+  filter: blur(140px);
+}
+
+.splash-blob-2 {
+  position: absolute;
+  bottom: 33%;
+  right: 33%;
+  width: 400px;
+  height: 400px;
+  background: rgba(65, 90, 119, 0.1);
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.splash-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.splash-content.is-hidden {
+  opacity: 0;
+  transform: translateY(24px) scale(0.95);
+}
+
+.splash-content.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.splash-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(to bottom right, var(--coral-400), var(--coral-500));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 25px 50px rgba(231, 111, 81, 0.25);
+}
+
+.splash-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.03em;
+}
+
+.splash-title span {
+  color: var(--coral-400);
+}

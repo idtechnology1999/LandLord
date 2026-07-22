@@ -1,0 +1,420 @@
+/* ── DARK MODE OVERRIDES ── */
+.dark body {
+  background: var(--surface);
+  color: #D4DCE8;
+}
+
+/* Sidebar */
+.dark .sidebar {
+  background: #0A0E16;
+}
+
+.dark .sidebar-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Header */
+.dark .top-header {
+  background: rgba(15, 18, 25, 0.82);
+  border-bottom-color: rgba(42, 48, 64, 0.4);
+}
+
+.dark .search-box input {
+  background: #1A1F2E;
+  color: #D4DCE8;
+}
+
+.dark .search-box input::placeholder {
+  color: #3A4258;
+}
+
+.dark .search-box input:focus {
+  background: #1A1F2E;
+  border-color: rgba(231, 111, 81, 0.4);
+}
+
+.dark .mobile-menu-btn {
+  color: #A8B5C8;
+}
+
+.dark .mobile-menu-btn:hover {
+  background: #1A1F2E;
+}
+
+/* Filter bar */
+.dark .filter-bar {
+  background: rgba(15, 18, 25, 0.82);
+  border-bottom-color: rgba(42, 48, 64, 0.4);
+}
+
+.dark .filter-search input {
+  background: #1A1F2E;
+  border-color: #2A3040;
+  color: #D4DCE8;
+}
+
+.dark .filter-search input::placeholder {
+  color: #3A4258;
+}
+
+.dark .filter-search input:focus {
+  background: #1A1F2E;
+  border-color: rgba(231, 111, 81, 0.4);
+}
+
+.dark .filter-search svg {
+  color: #3A4258;
+}
+
+.dark .filter-btn {
+  background: #1A1F2E;
+  border-color: #2A3040;
+  color: #A8B5C8;
+}
+
+.dark .filter-btn:hover {
+  background: #252B3B;
+  border-color: #3A4258;
+  color: #D4DCE8;
+}
+
+.dark .filter-btn--active {
+  background: #E76F51;
+  border-color: #E76F51;
+}
+
+/* Dropdowns */
+.dark .filter-dropdown-menu {
+  background: #1A1F2E;
+  border-color: #2A3040;
+}
+
+.dark .filter-dropdown-item {
+  color: #A8B5C8;
+}
+
+.dark .filter-dropdown-item:hover {
+  background: #252B3B;
+  color: #D4DCE8;
+}
+
+.dark .filter-dropdown-item.is-active {
+  background: rgba(231, 111, 81, 0.15);
+  color: #EE8A6F;
+}
+
+.dark .filter-location-col {
+  border-right-color: #2A3040;
+}
+
+.dark .filter-location-label {
+  color: #5A7091;
+}
+
+/* Category pills */
+.dark .category-pill {
+  background: #1A1F2E;
+  border-color: #2A3040;
+  color: #A8B5C8;
+}
+
+.dark .category-pill:hover {
+  background: #252B3B;
+  border-color: #3A4258;
+  color: #D4DCE8;
+}
+
+.dark .category-pill.is-active {
+  background: #E76F51;
+  border-color: #E76F51;
+}
+
+/* Listing cards */
+.dark .listing-card {
+  background: #1A1F2E;
+  border-color: #2A3040;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark .listing-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.dark .listing-card-title {
+  color: #EDF1F7;
+}
+
+.dark .listing-card-location {
+  color: #778DA9;
+}
+
+.dark .listing-card-location svg {
+  color: #5A7091;
+}
+
+.dark .listing-card-price-amount {
+  color: #EE8A6F;
+}
+
+.dark .listing-card-price-period {
+  color: #5A7091;
+}
+
+.dark .listing-card-meta {
+  border-top-color: #2A3040;
+  color: #778DA9;
+}
+
+.dark .listing-card-meta-item svg {
+  color: #5A7091;
+}
+
+.dark .listing-card-meta-divider {
+  color: #2A3040;
+}
+
+.dark .listing-card-save {
+  background: rgba(26, 31, 46, 0.9);
+}
+
+.dark .listing-card-type {
+  background: rgba(26, 31, 46, 0.95);
+  color: #EDF1F7;
+}
+
+/* Listing detail */
+.dark .listing-detail-back {
+  color: #778DA9;
+}
+
+.dark .listing-detail-back:hover {
+  color: #A8B5C8;
+}
+
+.dark .gallery {
+  background: #1A1F2E;
+  border-color: #2A3040;
+}
+
+.dark .gallery-thumbs {
+  background: #1A1F2E;
+}
+
+.dark .listing-info-card {
+  background: #1A1F2E;
+  border-color: #2A3040;
+}
+
+.dark .listing-info-title {
+  color: #EDF1F7;
+}
+
+.dark .listing-info-meta-item {
+  color: #778DA9;
+}
+
+.dark .listing-info-meta-dot {
+  color: #2A3040;
+}
+
+.dark .listing-info-price {
+  color: #EE8A6F;
+}
+
+.dark .listing-section-title {
+  color: #EDF1F7;
+}
+
+.dark .listing-section-text {
+  color: #A8B5C8;
+}
+
+.dark .amenity-item {
+  background: #252B3B;
+  color: #A8B5C8;
+}
+
+.dark .amenity-item svg {
+  color: #EE8A6F;
+}
+
+.dark .detail-info-box {
+  background: #252B3B;
+}
+
+.dark .detail-info-value {
+  color: #A8B5C8;
+}
+
+/* Booking card */
+.dark .booking-card {
+  background: #1A1F2E;
+  border-color: #2A3040;
+}
+
+.dark .booking-price {
+  color: #EDF1F7;
+}
+
+.dark .btn-message {
+  border-color: #2A3040;
+  color: #A8B5C8;
+}
+
+.dark .btn-message:hover {
+  background: #252B3B;
+}
+
+.dark .landlord-card {
+  border-top-color: #2A3040;
+}
+
+.dark .landlord-name {
+  color: #EDF1F7;
+}
+
+.dark .trust-items {
+  border-top-color: #2A3040;
+}
+
+.dark .trust-item-title {
+  color: #EDF1F7;
+}
+
+/* Auth modal */
+.dark .auth-modal-content {
+  background: #1A1F2E;
+}
+
+/* Profile dropdown */
+.dark .profile-dropdown {
+  background: #1A1F2E;
+  border-color: #2A3040;
+}
+
+.dark .profile-dropdown-header {
+  border-bottom-color: #2A3040;
+}
+
+.dark .profile-dropdown-name {
+  color: #EDF1F7;
+}
+
+.dark .profile-dropdown-item {
+  color: #A8B5C8;
+}
+
+.dark .profile-dropdown-item:hover {
+  background: #252B3B;
+}
+
+.dark .profile-dropdown-divider {
+  border-top-color: #2A3040;
+}
+
+/* Pages */
+.dark .search-page-empty-icon {
+  background: #252B3B;
+}
+
+.dark .pagination-inner {
+  background: #1A1F2E;
+  border-color: #2A3040;
+}
+
+.dark .pagination-num:hover {
+  background: #252B3B;
+}
+
+/* Register page */
+.dark .register-page {
+  background: var(--surface);
+}
+
+.dark .register-card {
+  background: #1A1F2E;
+  border-color: #2A3040;
+}
+
+.dark .register-title {
+  color: #EDF1F7;
+}
+
+.dark .register-subtitle {
+  color: #778DA9;
+}
+
+/* Neighborhood scores */
+.dark .neighborhood-scores {
+  background: #252B3B;
+  border-color: #2A3040;
+}
+
+.dark .neighborhood-score-label {
+  color: #A8B5C8;
+}
+
+.dark .neighborhood-score-value {
+  color: #EDF1F7;
+}
+
+/* Search alerts */
+.dark .search-alert-banner {
+  background: #252B3B;
+  border-color: #2A3040;
+}
+
+.dark .search-alert-text {
+  color: #A8B5C8;
+}
+
+/* Price comparison */
+.dark .price-compare {
+  background: #252B3B;
+  border-color: #2A3040;
+}
+
+/* Notifications */
+.dark .notif-dropdown {
+  background: #1A1F2E;
+  border-color: #2A3040;
+}
+
+/* Skeleton */
+.dark .skeleton {
+  background: linear-gradient(90deg, #1A1F2E 25%, #252B3B 50%, #1A1F2E 75%);
+}
+
+/* Scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+  background: #2A3040;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3A4258;
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy-400);
+  transition: all 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+  background: var(--surface);
+  color: var(--navy-800);
+}
+
+.dark .dark-mode-toggle:hover {
+  background: #252B3B;
+  color: #EDF1F7;
+}

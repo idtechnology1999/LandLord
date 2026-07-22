@@ -1,0 +1,452 @@
+/* ── REGISTER PAGE ── */
+.register-page {
+  min-height: 100vh;
+  background: var(--surface);
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 580px;
+}
+
+.register-brand {
+  margin-bottom: 32px;
+}
+
+.register-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.register-brand-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(to bottom right, var(--coral-400), var(--coral-500));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(231, 111, 81, 0.2);
+}
+
+.register-brand-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy-800);
+  letter-spacing: -0.02em;
+}
+
+.register-brand-text span {
+  color: var(--coral-500);
+}
+
+/* ── CARD ── */
+.register-card {
+  background: white;
+  border-radius: 24px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.register-card-header {
+  margin-bottom: 28px;
+}
+
+.register-card-header h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--navy-800);
+  letter-spacing: -0.03em;
+}
+
+.register-card-header p {
+  font-size: 14px;
+  color: var(--navy-400);
+  margin-top: 6px;
+}
+
+/* ── ROLE SELECTION ── */
+.register-role-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.register-role-card {
+  padding: 24px 18px;
+  border-radius: 18px;
+  border: 2px solid var(--border);
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.register-role-card:hover {
+  border-color: var(--coral-300);
+  box-shadow: 0 8px 24px rgba(231, 111, 81, 0.08);
+  transform: translateY(-2px);
+}
+
+.register-role-card:active {
+  transform: scale(0.98);
+}
+
+.register-role-card--landlord:hover {
+  border-color: var(--navy-200);
+  box-shadow: 0 8px 24px rgba(27, 38, 59, 0.08);
+}
+
+.register-role-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.register-role-icon--tenant {
+  background: var(--coral-50);
+  color: var(--coral-500);
+}
+
+.register-role-icon--landlord {
+  background: var(--navy-50);
+  color: var(--navy-600);
+}
+
+.register-role-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy-800);
+  margin-bottom: 4px;
+}
+
+.register-role-card > p {
+  font-size: 12px;
+  color: var(--navy-400);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.register-role-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.register-role-perks li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--navy-500);
+}
+
+.register-role-perks li svg {
+  color: var(--green-400);
+  flex-shrink: 0;
+}
+
+/* ── DIVIDER ── */
+.register-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.register-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.register-divider span {
+  font-size: 12px;
+  color: var(--navy-300);
+  font-weight: 500;
+}
+
+/* ── GOOGLE BTN ── */
+.register-google-btn {
+  width: 100%;
+  padding: 14px;
+  border: 1.5px solid var(--border);
+  background: white;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.register-google-btn:hover {
+  background: var(--surface);
+  border-color: var(--navy-200);
+}
+
+.register-google-btn:active {
+  transform: scale(0.98);
+}
+
+/* ── FOOTER TEXT ── */
+.register-footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: var(--navy-400);
+  margin-top: 16px;
+}
+
+.register-terms-text {
+  text-align: center;
+  font-size: 11px;
+  color: var(--navy-300);
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.register-link {
+  color: var(--coral-500);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* ── BACK BTN ── */
+.register-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy-400);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.register-back-btn:hover {
+  color: var(--navy-600);
+}
+
+/* ── ROLE BADGE ── */
+.register-role-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.register-role-badge--tenant {
+  background: var(--coral-50);
+  color: var(--coral-600);
+}
+
+.register-role-badge--landlord {
+  background: var(--navy-50);
+  color: var(--navy-600);
+}
+
+/* ── FORM ── */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.register-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy-600);
+  margin-bottom: 6px;
+}
+
+.register-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.register-input-icon {
+  position: absolute;
+  left: 14px;
+  width: 16px;
+  height: 16px;
+  color: var(--navy-200);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.register-input-wrap input,
+.register-input-wrap select {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  background: var(--surface);
+  border: 1.5px solid transparent;
+  border-radius: 12px;
+  font-size: 13px;
+  color: var(--navy-800);
+  outline: none;
+  transition: all 0.2s ease;
+  appearance: none;
+}
+
+.register-input-wrap select {
+  cursor: pointer;
+}
+
+.register-input-wrap input::placeholder {
+  color: var(--navy-300);
+}
+
+.register-input-wrap input:focus,
+.register-input-wrap select:focus {
+  background: white;
+  border-color: var(--coral-300);
+  box-shadow: 0 0 0 3px rgba(231, 111, 81, 0.1);
+}
+
+.register-pw-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--navy-300);
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1;
+  transition: color 0.2s ease;
+}
+
+.register-pw-toggle:hover {
+  color: var(--navy-500);
+}
+
+.register-field-hint {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--green-600);
+  margin-top: 6px;
+  padding-left: 2px;
+}
+
+.register-error {
+  font-size: 12px;
+  color: #DC2626;
+  font-weight: 500;
+  padding-left: 2px;
+}
+
+/* ── CHECKBOX ── */
+.register-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--navy-400);
+  line-height: 1.6;
+}
+
+.register-checkbox input[type="checkbox"] {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  accent-color: var(--coral-500);
+  flex-shrink: 0;
+}
+
+/* ── SUBMIT ── */
+.register-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--navy-800);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(27, 38, 59, 0.2);
+  margin-top: 4px;
+}
+
+.register-submit-btn:hover:not(:disabled) {
+  background: var(--navy-700);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(27, 38, 59, 0.25);
+}
+
+.register-submit-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.register-submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .register-page {
+    padding: 24px 12px;
+  }
+
+  .register-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .register-card-header h1 {
+    font-size: 22px;
+  }
+
+  .register-role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .register-field-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,462 @@
+/* ── AUTH MODAL ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 19, 33, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  position: relative;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 448px;
+  margin: 0 16px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: scale-in 0.15s ease-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  color: var(--navy-400);
+  transition: background 0.15s ease;
+}
+
+.modal-close:hover {
+  background: var(--navy-100);
+}
+
+.modal-body {
+  padding: 32px;
+}
+
+/* ── AUTH HEADER ── */
+.auth-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-header-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(to bottom right, var(--coral-400), var(--coral-600));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 10px 25px rgba(231, 111, 81, 0.2);
+}
+
+.auth-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy-800);
+  margin-bottom: 4px;
+}
+
+.auth-header-prompt {
+  font-size: 14px;
+  color: var(--coral-500);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: var(--navy-400);
+}
+
+/* ── ROLE SELECTOR ── */
+.role-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.role-card {
+  flex: 1;
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-card:hover {
+  border-color: var(--navy-200);
+}
+
+.role-card.is-selected {
+  border-color: var(--coral-400);
+  background: var(--coral-50);
+}
+
+.role-card.is-selected.role-landlord {
+  border-color: var(--navy-400);
+  background: var(--navy-50);
+}
+
+.role-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  background: var(--surface);
+  color: var(--navy-400);
+}
+
+.role-card.is-selected .role-card-icon {
+  background: var(--coral-500);
+  color: white;
+}
+
+.role-card.is-selected.role-landlord .role-card-icon {
+  background: var(--navy-800);
+  color: white;
+}
+
+.role-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-800);
+  text-transform: capitalize;
+}
+
+.role-card-desc {
+  font-size: 12px;
+  color: var(--navy-400);
+  margin-top: 2px;
+}
+
+/* ── AUTH ACTIONS ── */
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-continue {
+  width: 100%;
+  padding: 14px;
+  background: var(--navy-800);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px rgba(27, 38, 59, 0.2);
+}
+
+.btn-continue:hover {
+  background: var(--navy-700);
+}
+
+.btn-continue:active {
+  transform: scale(0.98);
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.auth-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.auth-divider-text {
+  font-size: 12px;
+  color: var(--navy-300);
+  font-weight: 500;
+}
+
+.btn-google {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid var(--border);
+  background: none;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-google:hover {
+  background: var(--surface);
+  border-color: var(--navy-200);
+}
+
+.btn-google:active {
+  transform: scale(0.98);
+}
+
+.auth-terms {
+  text-align: center;
+  font-size: 12px;
+  color: var(--navy-400);
+  margin-top: 20px;
+}
+
+.auth-terms-link {
+  color: var(--coral-500);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ── AUTH FORM ── */
+.auth-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--navy-400);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: color 0.2s ease;
+}
+
+.auth-back-btn:hover {
+  color: var(--navy-600);
+}
+
+.auth-form-header {
+  margin-bottom: 24px;
+}
+
+.auth-role-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.auth-role-badge--tenant {
+  background: var(--coral-100);
+  color: var(--coral-600);
+}
+
+.auth-role-badge--landlord {
+  background: var(--navy-100);
+  color: var(--navy-600);
+}
+
+.auth-form-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+
+.auth-form-header p {
+  font-size: 14px;
+  color: var(--navy-400);
+  margin-top: 4px;
+}
+
+.auth-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--navy-800);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.auth-input::placeholder {
+  color: var(--navy-300);
+}
+
+.auth-input:focus {
+  background: white;
+  border-color: var(--coral-200);
+  box-shadow: 0 0 0 3px rgba(231, 111, 81, 0.15);
+}
+
+.auth-input-wrapper {
+  position: relative;
+}
+
+.auth-input-wrapper .auth-input {
+  padding-right: 48px;
+}
+
+.auth-password-toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--navy-300);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.auth-password-toggle:hover {
+  color: var(--navy-500);
+}
+
+.auth-verify-hint {
+  font-size: 12px;
+  color: var(--green-600);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 4px;
+}
+
+.auth-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.auth-checkbox-label input[type="checkbox"] {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--navy-300);
+  accent-color: var(--coral-500);
+}
+
+.auth-checkbox-text {
+  font-size: 12px;
+  color: var(--navy-400);
+  line-height: 1.6;
+}
+
+.auth-checkbox-text a,
+.auth-checkbox-text .auth-terms-link {
+  color: var(--coral-500);
+  font-weight: 500;
+}
+
+.auth-remember-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-remember-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.auth-remember-label span {
+  font-size: 12px;
+  color: var(--navy-500);
+}
+
+.auth-forgot {
+  font-size: 12px;
+  color: var(--coral-500);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-forgot:hover {
+  color: var(--coral-600);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--navy-800);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px rgba(27, 38, 59, 0.2);
+  margin-top: 20px;
+}
+
+.btn-submit:hover {
+  background: var(--navy-700);
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+.auth-switch {
+  text-align: center;
+  font-size: 14px;
+  color: var(--navy-400);
+  margin-top: 20px;
+}
+
+.auth-switch-btn {
+  color: var(--coral-500);
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.auth-switch-btn:hover {
+  color: var(--coral-600);
+}
